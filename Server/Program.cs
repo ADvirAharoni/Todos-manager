@@ -48,4 +48,7 @@ app.MapDelete("/todos/{id}", async ([FromServices] TodosContext Todos, [FromRout
     app.UseSwaggerUI();
 //}
 app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+app.MapGet("/", ()=>"Todo list server is up and running.");
+
 app.Run();
