@@ -15,7 +15,7 @@ builder.Services.AddCors();
 var app = builder.Build();
 
 
-app.MapGet("/todos", async ([FromServices] TodosContext Todos, HttpRequest request) =>
+app.MapGet("/todos", async ([FromServices] TodosContext Todos) =>
 {
     var allTodos = await Todos.Items.ToListAsync();
     return allTodos;
