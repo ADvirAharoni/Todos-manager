@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5224"
+  baseURL: process.env.REACT_APP_TODOS_API_ADDRESS
 });
 
 axiosInstance.interceptors.response.use(
