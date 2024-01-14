@@ -42,10 +42,10 @@ app.MapDelete("/todos/{id}", async ([FromServices] TodosContext Todos, [FromRout
     return "Item removed";
 });
 
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.Run();
